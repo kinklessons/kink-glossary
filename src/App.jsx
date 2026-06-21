@@ -81,7 +81,7 @@ export default function JsonSearchApp() {
   return (
     <div className="p-6 max-w-3xl mx-auto">
     <div className="flex items-center gap-3 p-4">
-      <img src={logo} alt="KinkLessons" className="h-6 w-6 rounded-full" />
+      <img src={logo} alt="KinkLessons" className="h-6 w-6 rounded-full" style={{ width: "200px", height: "200px" }} />
     </div>
 
       <h1 className="text-2xl font-bold mb-4">Definition Search</h1>
