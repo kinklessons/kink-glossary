@@ -1,6 +1,7 @@
 import { useEffect, useState, useMemo } from "react";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
+import logo from "@/assets/kinklessons-logo.png";
 
 export default function JsonSearchApp() {
   const [data, setData] = useState([]);
@@ -79,6 +80,11 @@ export default function JsonSearchApp() {
 
   return (
     <div className="p-6 max-w-3xl mx-auto">
+    <div className="flex items-center gap-3 p-4">
+      <img src={logo} alt="KinkLessons" className="h-10 w-10 rounded-full" />
+      <span className="text-xl font-bold">KinkLessons</span>
+    </div>
+
       <h1 className="text-2xl font-bold mb-4">Definition Search</h1>
 
       <Input
