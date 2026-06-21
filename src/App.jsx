@@ -105,7 +105,7 @@ export default function JsonSearchApp() {
       </p>
 
 <div className="space-y-4">
-  {displayData.map((item) => (
+  {filteredData.map((item) => (
     <div
       key={item.id}
       className="border rounded-xl p-4 shadow-sm bg-white hover:shadow-md transition"
