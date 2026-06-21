@@ -104,23 +104,32 @@ export default function JsonSearchApp() {
         {filteredData.length} result{filteredData.length !== 1 && "s"}
       </p>
 
-      <div className="space-y-4">
-        {filteredData.map((item) => (
-          <Card key={item.id} className="rounded-2xl shadow">
-            <CardContent className="p-4">
-              <p className="font-semibold">
-                {highlightText(item.Question)}
-              </p>
-              <p className="text-sm text-gray-500">
-                Category: {highlightText(item.Category)}
-              </p>
-              <p className="mt-2">
-                {highlightText(item.Definition || "No definition available")}
-              </p>
-            </CardContent>
-          </Card>
-        ))}
+<div className="space-y-4">
+  {displayData.map((item) => (
+    <div
+      key={item.id}
+      className="border rounded-xl p-4 shadow-sm bg-white hover:shadow-md transition"
+    >
+      {/* Title */}
+      <h2 className="text-lg font-semibold text-gray-900">
+        {highlightText(item.Question)}
+      </h2>
+
+      {/* Category badge */}
+      <div className="mt-1 mb-3">
+        <span className="inline-block text-xs px-2 py-1 rounded-full bg-gray-100 text-gray-700">
+          {item.Category}
+        </span>
       </div>
+
+      {/* Definition */}
+      <p className="text-sm leading-relaxed text-gray-600">
+        {highlightText(item.Definition || "No definition available")}
+      </p>
+    </div>
+  ))}
+</div>
+
     </div>
   );
 }
