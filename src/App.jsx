@@ -151,7 +151,7 @@ export default function JsonSearchApp() {
         {highlightText(item.Definition || "No definition available")}
       </p>
     </div>
-    <hr></hr>
+    <hr>
   ))}
 </div>
 
