@@ -93,7 +93,7 @@ export default function JsonSearchApp() {
     onChange={(e) => setQuery(e.target.value)}
     placeholder="Search..."
     className="w-full"
-	    style {{ margin: "5px", padding: "5px" }}
+	    style={{ margin: "5px", padding: "5px" }}
   />
 
   <select
