@@ -150,8 +150,8 @@ export default function JsonSearchApp() {
       <p className="text-sm leading-relaxed text-gray-600">
         {highlightText(item.Definition || "No definition available")}
       </p>
+    <hr></hr>
     </div>
-    <hr>
   ))}
 </div>
 
