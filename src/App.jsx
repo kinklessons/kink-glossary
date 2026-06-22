@@ -81,33 +81,52 @@ export default function JsonSearchApp() {
   return (
     <div className="p-6 max-w-3xl mx-auto">
     <div className="flex items-center gap-3 p-4">
-      <img src={logo} alt="KinkLessons" className="h-6 w-6 rounded-full" style={{ width: "200px", height: "200px" }} />
+      <a href="https://kinklessons.com/"><img src={logo} alt="KinkLessons" className="h-6 w-6 rounded-full" style={{ width: "200px", height: "200px" }} /></a>
     </div>
 
       <h1 className="text-2xl font-bold mb-4">Definition Search</h1>
 
-      <Input
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search..."
-        className="mb-3"
-      />
 
-      <select
-        value={selectedCategory}
-        onChange={(e) => setSelectedCategory(e.target.value)}
-        className="mb-4 p-2 border rounded w-full"
-      >
-        {categories.map((c) => (
-          <option key={c} value={c}>
-            {c}
-          </option>
-        ))}
-      </select>
+<div className="flex flex-col gap-3 w-full">
+  <Input
+    value={query}
+    onChange={(e) => setQuery(e.target.value)}
+    placeholder="Search..."
+    className="w-full"
+  />
 
+  <select
+    value={selectedCategory}
+    onChange={(e) => setSelectedCategory(e.target.value)}
+    className="
+      w-full
+      h-10
+      px-3
+      rounded-md
+      border
+      border-input
+      bg-background
+      text-sm
+      shadow-sm
+      focus-visible:outline-none
+      focus-visible:ring-2
+      focus-visible:ring-ring
+      focus-visible:ring-offset-2
+    "
+  >
+    {categories.map((c) => (
+      <option key={c} value={c}>
+        {c}
+      </option>
+    ))}
+  </select>
+</div>
+
+      <p></p>
       <p className="mb-4 text-sm text-gray-600">
         {filteredData.length} result{filteredData.length !== 1 && "s"}
       </p>
+<hr />
 
 <div className="space-y-4">
   {filteredData.map((item) => (
@@ -123,7 +142,7 @@ export default function JsonSearchApp() {
       {/* Category badge */}
       <div className="mt-1 mb-3">
         <span className="inline-block text-xs px-2 py-1 rounded-full bg-gray-100 text-gray-700">
-          {item.Category}
+          Category: {item.Category}
         </span>
       </div>
 
@@ -132,6 +151,7 @@ export default function JsonSearchApp() {
         {highlightText(item.Definition || "No definition available")}
       </p>
     </div>
+    <hr />
   ))}
 </div>
 
