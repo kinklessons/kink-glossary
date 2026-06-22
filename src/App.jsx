@@ -93,6 +93,7 @@ export default function JsonSearchApp() {
     onChange={(e) => setQuery(e.target.value)}
     placeholder="Search..."
     className="w-full"
+	    style {{ margin: "5px", padding: "5px" }}
   />
 
   <select
@@ -113,6 +114,7 @@ export default function JsonSearchApp() {
       focus-visible:ring-ring
       focus-visible:ring-offset-2
     "
+    style {{ margin: "5px", padding: "5px" }}
   >
     {categories.map((c) => (
       <option key={c} value={c}>
