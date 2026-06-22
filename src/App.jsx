@@ -114,7 +114,7 @@ export default function JsonSearchApp() {
       focus-visible:ring-ring
       focus-visible:ring-offset-2
     "
-    style {{ margin: "5px", padding: "5px" }}
+    style={{ margin: "5px", padding: "5px" }}
   >
     {categories.map((c) => (
       <option key={c} value={c}>
